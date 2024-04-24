@@ -3,7 +3,7 @@ import { Field, Formik, Form } from 'formik';
 import toast, { Toaster } from 'react-hot-toast';
 import { IoSearch } from 'react-icons/io5';
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar({ onSubmit }) {
   const notify = () => {
     toast.error('Search field must be field!', {
       duration: 2250,
@@ -17,7 +17,7 @@ export default function SearchBar({ onSearch }) {
         initialValues={{ query: '' }}
         onSubmit={(values, actions) => {
           if (values.query.trim() !== '') {
-            onSearch(values.query);
+            onSubmit(values.query);
             actions.resetForm();
           } else {
             notify();

@@ -1,6 +1,7 @@
 import css from './ImageCard.module.css';
 
 export default function ImageCard({ item, openModal }) {
+  console.log(item);
   return (
     <div>
       <img

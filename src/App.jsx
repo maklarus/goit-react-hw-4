@@ -60,7 +60,7 @@ export default function App() {
 
   return (
     <>
-      <SearchBar onSearch={inputHandler}></SearchBar>
+      <SearchBar onSubmit={inputHandler}></SearchBar>
 
       {error && <p>Oops, some error. Please reload!</p>}
 
