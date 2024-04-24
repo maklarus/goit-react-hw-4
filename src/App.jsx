@@ -50,6 +50,7 @@ export default function App() {
 
   const inputHandler = newQuery => {
     setArticles([]);
+    setPage(1);
     const inputValue = newQuery;
     setQuery(inputValue);
   };
